@@ -24,6 +24,9 @@
 		4F50A0F123D6AB05007A6904 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F50A0F423D6AB05007A6904 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F50A0F623D6AB05007A6904 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F50A0FD23D6C214007A6904 /* Miles.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Miles.playground; path = ../Miles.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4F50A0FF23D6CC47007A6904 /* ArraysCount.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = ArraysCount.playground; path = "You are awesome!/ArraysCount.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4F50A12023D6CEBC007A6904 /* lastName.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = lastName.playground; path = "You are awesome!/lastName.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +43,9 @@
 		4F50A0DC23D6AAFE007A6904 = {
 			isa = PBXGroup;
 			children = (
+				4F50A12023D6CEBC007A6904 /* lastName.playground */,
+				4F50A0FF23D6CC47007A6904 /* ArraysCount.playground */,
+				4F50A0FD23D6C214007A6904 /* Miles.playground */,
 				4F50A0E723D6AAFE007A6904 /* You are awesome! */,
 				4F50A0E623D6AAFE007A6904 /* Products */,
 			);
