@@ -7,21 +7,27 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
+    
    
-    var index = -1
+    
     @IBOutlet weak var messageLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    let totalImages = 9
+    var messageNumber = 0
+    var imageNumber = 0
+    var audioPlayer = AVAudioPlayer()
 
     @IBAction func myButtonPressed(_ sender: UIButton) {
         
-        imageView.image=UIImage(named: "image0")
+        
         
         let messages = ["You are Awesome!",
         "You are Great!",
@@ -34,17 +40,35 @@ class ViewController: UIViewController {
         "I can't wait to download your app!"
         ]
         
-        var newIndex: Int
-        repeat{
-            newIndex=Int.random(in: 0..<messages.count)
-        }while newIndex==index
         
-        index=newIndex
-        messageLabel.text = messages[index]
+        var newMessageNumber = Int.random(in: 0...messages.count-1)
+        
+        while messageNumber == newMessageNumber {
+            newMessageNumber=Int.random(in: 0...messages.count-1)
+        }
+        messageNumber = newMessageNumber
+        messageLabel.text=messages[messageNumber]
+        
+        var newImageNumber = (Int.random(in: 0...9))
+        
+        while imageNumber == newImageNumber{
+            newImageNumber = (Int.random(in: 0...9))
+        }
+        imageNumber = newImageNumber
+        imageView.image = UIImage(named: "image\(imageNumber)")
+        
+        if let sound = NSDataAsset(name: "sound0"){
+            do {
+                try audioPlayer = AVAudioPlayer(data: sound.data)
+                audioPlayer.play()
+            } catch {
+                print("ERROR: \(error.localizedDescription)")
+            }
+            
+        } else {print("Error loading sound Data")}
         
         
-        
-        
+    
         
     }
     
